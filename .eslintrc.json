@@ -1,11 +1,23 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
-  ],
+  "extends": "next/core-web-vitals",
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
-    "no-unused-vars": "off"
-  }
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "app/dashboard/(overview)/page.tsx",
+        "app/lib/actions.ts",
+        "app/ui/customers/table.tsx",
+        "app/ui/dashboard/latest-invoices.tsx",
+        "app/ui/dashboard/revenue-chart.tsx",
+        "app/ui/invoices/edit-form.tsx"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-unused-vars": "off"
+      }
+    }
+  ]
 }

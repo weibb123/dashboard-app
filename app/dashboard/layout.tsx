@@ -1,4 +1,5 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+
  
 // children are pages inside the dashboard folder
 export default function Layout({ children }: { children: React.ReactNode }) {
